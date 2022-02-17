@@ -1,0 +1,21 @@
+@layer base {
+    .ClientModal {
+        @apply w-[483px] h-[169px] bg-light-brown-70 p-[20px] rounded-2xl relative text-black;
+
+        &-title {
+            @apply font-bold text-[24px] leading-[28.13px] font-roboto text-neutral-black inline-block uppercase mb-2;
+        }
+
+        &-message {
+            @apply font-normal text-[15px] leading-[17.58px] font-roboto text-neutral-black inline-block mb-[40px] tracking-[0.5px];
+        }
+
+        &-button-outline {
+            @apply h-[34px] w-[143px] mr-2 px-[35px] py-[8px] font-roboto font-medium text-[15px] tracking-[0.2px] leading-[17.58px];
+        }
+
+        &-button-primary {
+            @apply h-[34px] w-[143px] ml-2 px-[35px] py-[8px] font-roboto font-medium text-[15px] tracking-[0.2px] leading-[17.58px];
+        }
+    }
+}

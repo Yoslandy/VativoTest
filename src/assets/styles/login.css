@@ -1,0 +1,17 @@
+@layer base {
+    .login {
+        width: 358px;
+        &-gradient {
+            background: radial-gradient(
+                50% 50% at 50% 50%,
+                #00111a 0%,
+                #004366 100%
+            );
+        }
+        &-forgot {
+            font-size: 15px;
+            color: #9fa1a0;
+            @apply inline-block text-neutral-gray-110 underline mt-3;
+        }
+    }
+}

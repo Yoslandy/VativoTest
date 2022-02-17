@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import "./external.css";
+@import "./variables.css";
+@import "./accounts.css";
+@import "./fonts.css";
+@import "./form.css";
+@import "./login.css";
+@import "./icon.css";
+@import "./notification.css";
+@import "./dropdown.css";
+@import "./table.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

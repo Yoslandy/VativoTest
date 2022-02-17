@@ -1,0 +1,21 @@
+@layer base {
+    .fas {
+        &-error {
+            &::before {
+                @apply text-red-500;
+            }
+        }
+
+        &-warning {
+            &::before {
+                @apply text-orange-500;
+            }
+        }
+
+        &-success {
+            &::before {
+                @apply text-green-500;
+            }
+        }
+    }
+}

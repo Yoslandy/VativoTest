@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Button form correctly 1`] = `
+<button
+  className="button bg-primary-60 text-white active:bg-primary-100 h-8 w-[100px] bg-primary-100 "
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+   
+  My Button
+   
+</button>
+`;

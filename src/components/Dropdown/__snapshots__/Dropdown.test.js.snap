@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders DropDown form correctly 1`] = `
+<form
+  action="#"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="flex flex-col"
+  >
+    <label
+      className="font-roboto text-xs text-primary-120 uppercase"
+    >
+      colors
+    </label>
+    <select
+      className="dropdown  Test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+    >
+      <option
+        className="dropdown-option"
+        value="#264653"
+      >
+        #264653
+      </option>
+      <option
+        className="dropdown-option"
+        value="#2a9d8f"
+      >
+        #2a9d8f
+      </option>
+      <option
+        className="dropdown-option"
+        value="#e9c46a"
+      >
+        #e9c46a
+      </option>
+    </select>
+  </div>
+</form>
+`;

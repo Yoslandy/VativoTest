@@ -1,0 +1,91 @@
+p,
+span,
+label,
+input,
+textarea,
+button {
+    font-family: var(--text-regular);
+}
+
+.title,
+h1 {
+    font-family: var(--text-black);
+    font-size: 72px;
+    letter-spacing: -1px;
+}
+
+.sh-1 {
+    font-family: var(--text-bold);
+    font-size: 24px;
+    letter-spacing: 0px;
+}
+
+.body {
+    &-1 {
+        font-family: var(--text-medium);
+        font-size: 18px;
+        letter-spacing: 1.5px;
+    }
+
+    &-2 {
+        font-family: var(--text-regular);
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    &-3 {
+        font-family: var(--text-medium);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    &-4 {
+        font-family: var(--text-regular);
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.button {
+    &-1 {
+        font-family: var(--text-medium);
+        font-size: 18px;
+        letter-spacing: 0.2px;
+    }
+
+    &-2 {
+        font-family: var(--text-medium);
+        font-size: 15px;
+        letter-spacing: 0.2px;
+    }
+
+    &-3 {
+        font-family: var(--text-medium);
+        font-size: 13px;
+        letter-spacing: 0.6px;
+        text-decoration: underline;
+    }
+}
+
+.caption {
+    &-1 {
+        font-family: var(--text-medium);
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    &-2 {
+        font-family: var(--text-regular);
+        font-size: 12px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+    }
+}
+
+.overline {
+    font-family: var(--text-medium);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

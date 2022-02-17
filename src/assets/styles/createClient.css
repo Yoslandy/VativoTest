@@ -1,0 +1,54 @@
+.ClientFormContainer {
+    padding: 40px 31px 34px 24px;
+}
+
+.CreateClientForm-Row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.CreateClientForm-Left {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 0.6;
+    row-gap: 36px;
+    margin-right: 25px;
+}
+
+.Input {
+    width: 264px;
+}
+
+.CreateClientForm-Left .Dropdown {
+    height: 43px;
+    width: 264px;
+}
+
+.CreateClientForm-Right {
+    flex: 0.4;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 36px;
+}
+
+.Input-small {
+    width: 178px;
+}
+
+.Input-big {
+    width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

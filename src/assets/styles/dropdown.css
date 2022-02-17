@@ -1,0 +1,28 @@
+@layer base {
+    .dropdown {
+        border-radius: 5px;
+        height: 40px;
+        max-width: 300px;
+        background-image: url("../img/down_arrow_black.svg");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1rem 1rem;
+        padding-right: 2.5rem;
+
+        @apply w-full focus:outline-none active:outline-none bg-white text-primary-50 hover:text-black focus:text-white focus:bg-primary-120 border-slate-300 hover:border-black;
+
+        &-option {
+            @apply bg-white hover:bg-primary-50 text-primary-110;
+        }
+
+        &:focus{
+            background-image: url("../img/down_arrow.svg");
+            border: none
+        }
+
+        &.focus{
+            background-image: url("../img/up_arrow.svg");
+            border: none;
+        }
+    }
+}

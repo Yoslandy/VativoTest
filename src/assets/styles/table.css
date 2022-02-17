@@ -1,0 +1,11 @@
+@layer base {
+    .ThinScrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+    .ThinScrollbar::-webkit-scrollbar {
+        @apply bg-table-scrollbar rounded-lg;
+    }
+    .ThinScrollbar::-webkit-scrollbar-thumb {
+        @apply bg-neutral-gray-100 rounded-lg;
+    }
+}

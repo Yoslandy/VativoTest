@@ -1,0 +1,8 @@
+{
+  "arrowParens": "avoid",
+  "semi": false,
+  "editor.formatOnSave": true,
+  "tabWidth": 4,
+  "bracketSpacing": true,
+  "endOfLine": "auto"
+}

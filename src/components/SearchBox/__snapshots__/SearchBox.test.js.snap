@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders SearchBox form correctly 1`] = `
+<div
+  className="bg-white rounded-md w-full flex items-center  hover:text-white"
+>
+  <span
+    className="material-icons p-2"
+    onClick={[Function]}
+    role="button"
+  >
+    search
+  </span>
+  <input
+    className="input-focus-border-none w-full border-0 p-0 bg-transparent hover:placeholder:text-white"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+  />
+</div>
+`;

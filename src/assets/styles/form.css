@@ -1,0 +1,88 @@
+@layer base {
+    .password {
+        &-wrapper {
+            @apply w-full flex rounded-md relative;
+
+            .password-icon {
+                @apply text-neutral-gray-70;
+            }
+        }
+        &-input {
+            @apply text-[16px] rounded-md px-3 text-primary-50 placeholder-slate-300 focus:ring-0 bg-white w-full transition-all duration-150 border-0 caret-black focus:bg-primary-100 focus:caret-neutral-white;
+
+            &:focus {
+                & + span {
+                    color: white;
+                }
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 8px;
+            right: 3px;
+            width: 35px;
+            display: flex;
+            padding-right: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            @apply rounded-r-md;
+        }
+    }
+
+    .formik-error-message {
+        @apply font-roboto font-normal text-semantic-error tracking-[0.5px];
+        line-height: 16.41px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .input {
+        font-size: 16px;
+        @apply rounded-md px-3 py-3 placeholder-slate-300 focus:ring-0 bg-white w-full transition-all duration-150 h-[43px] text-primary-50;
+        &-focus-border-none {
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+
+    .input-active {
+        @apply bg-primary-100 text-[16px] text-primary-50;
+    }
+
+    .text-16 {
+        font-size: 16px;
+    }
+
+    .input-error {
+        @apply border-semantic-error border-[1px] border-dashed;
+
+        &-message {
+            @apply font-roboto font-normal text-semantic-error tracking-[0.5px];
+            line-height: 16.41px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+
+    .button {
+        @apply font-bold rounded-md outline-none focus:outline-none ease-linear transition-all duration-150 flex justify-center items-center;
+    }
+
+    .password-with-asterisk {
+        @apply relative w-full;
+
+        &-input {
+            @apply text-transparent;
+        }
+
+        &-dummy {
+            position: absolute;
+            top: 13px;
+            left: 0.75rem;
+            letter-spacing: 2.3px;
+        }
+    }
+}

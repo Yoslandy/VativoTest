@@ -1,0 +1,30 @@
+image: node:16
+# Workflow Configuration
+pipelines:
+    branches:
+        dev:
+            - parallel:
+                  - step:
+                        name: Build and Test
+                        caches:
+                            - node
+                        script:
+                            - npm install --force
+                            - npm run build
+                        artifacts:
+                            - build/**
+            - step:
+                  name: Deploy to S3 Development
+                  deployment: Development
+                  # trigger: manual
+                  clone:
+                      enabled: false
+                  script:
+                      # sync your files to S3
+                      - pipe: atlassian/aws-s3-deploy:1.1.0
+                        variables:
+                            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            S3_BUCKET: "vativorx-dev"
+                            LOCAL_PATH: "build"
