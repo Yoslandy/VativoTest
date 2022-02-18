@@ -8,6 +8,7 @@ import ConfigHeader from "./config-header"
 import DatePicker from "../../../components/Datepicker/index"
 import Input from "../../../components/Input/index"
 import Dropdown from "../../../components/Dropdown"
+import "../../../assets/styles/configuration.css"
 
 const SignupSchema = Yup.object().shape({
     password: Yup.string().required("Required"),
@@ -74,11 +75,11 @@ export default function CreateKeyword() {
 
                             return (
                                 <Form>
-                                    <div className="flex flex-row columns-4 items-center gap-6 mb-10">
-                                        <div>
+                                    <div className="createKeywordRow mb-6 gap-6">
+                                        <div className="width-4">
                                             <DatePicker label="Date" />
                                         </div>
-                                        <div>
+                                        <div className="width-4">
                                             <Input
                                                 label="Client"
                                                 value={values.email}
@@ -90,8 +91,7 @@ export default function CreateKeyword() {
                                                 error={isError || errors.email}
                                             />
                                         </div>
-
-                                        <div>
+                                        <div className="width-4">
                                             <Dropdown
                                                 label="Name in Switch"
                                                 className="h-[40px] font-roboto"
@@ -99,12 +99,12 @@ export default function CreateKeyword() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="flex flex-row columns-4 items-center gap-6 mb-10">
-                                        <div>
+                                    <div className="createKeywordRow gap-6">
+                                        <div className="width-4">
                                             <Input
                                                 label="Keyword"
                                                 value={values.email}
-                                                className="h-[40px]  w-full"
+                                                className="h-[40px] w-full"
                                                 type="email"
                                                 name="email"
                                                 placeholder="Email"
@@ -112,7 +112,7 @@ export default function CreateKeyword() {
                                                 error={isError || errors.email}
                                             />
                                         </div>
-                                        <div>
+                                        <div className="width-4">
                                             <Input
                                                 label="Type"
                                                 value={values.email}
@@ -124,8 +124,7 @@ export default function CreateKeyword() {
                                                 error={isError || errors.email}
                                             />
                                         </div>
-
-                                        <div>
+                                        <div className="width-4">
                                             <Input
                                                 label="Default Value"
                                                 value={values.email}
@@ -138,32 +137,26 @@ export default function CreateKeyword() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="flex flex-row columns-6 content-flex-end items-center  mb-4 mt-6">
-                                        <div>Hola</div>
-                                        <div className="flex gap-6">
+                                    <div className="createKeywordRow  marginTop-30">
+                                        <div>
+                                            <div>Import</div>
+                                            <div>Switch</div>
+                                        </div>
+
+                                        <div className="flex gap-6 width-6">
                                             <Button
                                                 type="outline"
                                                 text="Cancel"
-                                                size="small"
+                                                size="big"
                                                 className=" h-[34px] font-roboto text-[13px] text-neutral-primary tracking-[0.5px] leading-[17.58px] font-medium hover:bg-primary-100"
-                                                /* icon={
-                                                    <Icon
-                                                        type="add_circle_outline"
-                                                        className="mr-1"
-                                                    />
-                                                } */
                                                 onClick={() => {}}
                                             />
+
                                             <Button
                                                 type="primary"
-                                                text="New Keyword"
-                                                className="w-[200px] h-[34px] font-roboto text-[13px] text-neutral-white tracking-[0.5px] leading-[17.58px] font-medium hover:bg-primary-100"
-                                                /* icon={
-                                                    <Icon
-                                                        type="add_circle_outline"
-                                                        className="mr-1"
-                                                    />
-                                                } */
+                                                text="Create Keyword"
+                                                size="big"
+                                                className="padding-horizontal h-[34px] font-roboto text-[13px] text-neutral-white tracking-[0.5px] leading-[17.58px] font-medium hover:bg-primary-100"
                                                 onClick={() => {}}
                                             />
                                         </div>

@@ -141,10 +141,13 @@ export default function Settings() {
             <div id="myTabContent">
                 <div className="p-4">
                     <div className="flex flex-row columns-4 items-center gap-6 mb-10">
-                        <Dropdown
-                            className="h-[40px] font-roboto"
-                            options={dropdownOptions}
-                        />
+                        <div className="width-4">
+                            <Dropdown
+                                className="h-[40px] font-roboto"
+                                options={dropdownOptions}
+                            />
+                        </div>
+
                         <SearchBox
                             className="h-[40px] font-roboto text-[15px] text-neutral-gray-70 hover:bg-primary-100 "
                             onChange={handleFilter}

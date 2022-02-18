@@ -39,12 +39,12 @@ function Datepicker({ label }) {
                         year: "select-year",
                     }}
                     classes={{
-                        dateContainer: "flex",
+                        dateContainer: "flex" /* createKeywordRow */,
                         yearContainer: "rounded",
                         monthContainer: "rounded",
                         dayContainer: "rounded",
-                        year: "rounded dropdown w-[80px]",
-                        month: "rounded mr-1 ml-0 dropdown w-[100px]",
+                        year: "rounded dropdown w-[80px] ",
+                        month: "rounded mr-1 dropdown w-[100px]",
                         day: "rounded mr-1 dropdown w-[80px]",
                         yearOptions: "dropdown-option",
                         monthOptions: "dropdown-option",

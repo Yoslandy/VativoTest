@@ -15,7 +15,7 @@ export default function Dropdown(props) {
                 <Field
                     onClick={() => setClicked(!clicked)}
                     as="select"
-                    className={`dropdown w-[100px] ${
+                    className={`dropdown ${
                         clicked ? "focus" : ""
                     } ${className}`}
                 >

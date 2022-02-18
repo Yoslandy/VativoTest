@@ -1,0 +1,22 @@
+.createKeywordRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.width-4 {
+    width: 33.3%;
+}
+.width-6 {
+    width: 50%;
+}
+
+.marginTop-30 {
+    margin-top: 30%;
+}
+
+.padding-horizontal {
+    padding-left: 10;
+    padding-right: 10;
+}
