@@ -28,7 +28,7 @@ export default function AccountsTable({ columns, data }) {
     return (
         <table
             {...getTableProps()}
-            className="bg-white rounded-xl border w-max"
+            className="bg-white rounded-xl border w-full"
         >
             <thead className="border border-b-sky-100 h-[50px] font-roboto">
                 {headerGroups.map(headerGroup => (
@@ -45,7 +45,7 @@ export default function AccountsTable({ columns, data }) {
                                     column.isSorted
                                         ? "text-black"
                                         : "text-primary-60"
-                                }  text-[12px] w-[280px] font-medium leading-[14.06px] tracking-[1.5px]`}
+                                }  text-[12px] font-medium leading-[14.06px] tracking-[1.5px]`}
                             >
                                 <div className="flex items-center">
                                     <span className="mr-2">

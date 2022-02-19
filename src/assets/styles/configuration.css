@@ -1,8 +1,16 @@
 .createKeywordRow {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.max-width-300 {
+    max-width: 300px;
+}
+
+.max-width-100 {
+    max-width: 100px;
 }
 
 .width-4 {

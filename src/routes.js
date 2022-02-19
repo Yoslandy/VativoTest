@@ -1,7 +1,7 @@
 import { lazy } from "react"
 
 const Dashboard = lazy(() => import("./views/admin/Dashboard"))
-const Configuration = lazy(() => import("./views/admin/Configuration"))
+const Configuration = lazy(() => import("./views/admin/Configuration/Keywords"))
 const Accounts = lazy(() => import("./views/admin/Accounts/index"))
 
 const routes = [

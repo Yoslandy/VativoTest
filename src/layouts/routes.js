@@ -2,13 +2,15 @@ import React from "react"
 
 const Accounts = React.lazy(() => import("../views/admin/Accounts"))
 const Dashboard = React.lazy(() => import("../views/admin/Dashboard"))
-const Configuration = React.lazy(() => import("../views/admin/Configuration"))
+const Configuration = React.lazy(() =>
+    import("../views/admin/Configuration/Keywords")
+)
 const ChangePassword = React.lazy(() => import("../views/admin/ChangePassword"))
 const CreateClient = React.lazy(() =>
     import("../views/admin/Accounts/CreateClient")
 )
 const CreateKeyword = React.lazy(() =>
-    import("../views/admin/Configuration/create-keyword")
+    import("../views/admin/Configuration/Keywords/create-keyword")
 )
 
 const routes = [
