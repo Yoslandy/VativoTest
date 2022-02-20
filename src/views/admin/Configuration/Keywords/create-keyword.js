@@ -18,15 +18,15 @@ import { ReactComponent as ImportKeyword } from "../../../../assets/img/icons/Co
 
 const dropdownOptions = [
     {
-        label: "All Users",
+        label: "Opt 1",
         value: "1",
     },
     {
-        label: "Opt2",
+        label: "Opt 2",
         value: "2",
     },
     {
-        label: "Opt3",
+        label: "Opt 3",
         value: "3",
     },
 ]
@@ -40,21 +40,21 @@ export default function CreateKeyword() {
     const history = useHistory()
 
     const initialValues = {
-        date: "",
+        /* date: "", */
         client: "",
-        name: "",
+        /* name_switch: "", */
         keyword: "",
         type: "",
-        default: "",
+        default_value: "",
     }
 
     const validation = Yup.object().shape({
-        date: Yup.string().required("Required"),
+        /* date: Yup.string().required("Required"), */
         client: Yup.string().required("Required"),
-        name: Yup.string().required("Required"),
+        /* name_switch: Yup.string().required("Required"), */
         keyword: Yup.string().required("Required"),
         type: Yup.string().required("Required"),
-        default: Yup.string().required("Required"),
+        default_value: Yup.string().required("Required"),
     })
 
     const onSubmit = async values => {
@@ -83,7 +83,7 @@ export default function CreateKeyword() {
         <>
             <ConfigHeader />
             <div id="myTabContent">
-                <div className="p-4 bg-white rounded-xl border w-100">
+                <div className="p-4 bg-white rounded-xl border w-100 justify-center">
                     <h3 className="text-[24px] font-bold mb-8">
                         Create a Keyword
                     </h3>
@@ -101,21 +101,14 @@ export default function CreateKeyword() {
                             } */
 
                             return (
-                                <Form>
+                                <Form className="place-content-center">
                                     <div className="flex flex-row flex-wrap mb-6 gap-6">
-                                        <DatePicker
-                                            label="Date"
-                                            value={values.date}
-                                            type="date"
-                                            name="date"
-                                            onFocus={hideErrorMessage}
-                                            error={isError || errors.date}
-                                        />
+                                        <DatePicker label="Date" />
                                         <Input
                                             label="Client"
                                             value={values.client}
                                             className="h-[40px] w-[300px]"
-                                            type="client"
+                                            type="text"
                                             name="client"
                                             placeholder="Enter client"
                                             onFocus={hideErrorMessage}
@@ -123,20 +116,21 @@ export default function CreateKeyword() {
                                         />
                                         <Dropdown
                                             label="Name in Switch"
-                                            type="name"
-                                            name="name"
+                                            name="name_switch"
                                             className="h-[40px] w-[300px] font-roboto"
                                             options={dropdownOptions}
                                             onFocus={hideErrorMessage}
-                                            error={isError || errors.name}
+                                            error={
+                                                isError || errors.name_switch
+                                            }
                                         />
-                                    </div>
-                                    <div className="flex flex-row flex-wrap gap-6">
+                                        {/* </div>
+                                    <div className="flex flex-row flex-wrap gap-6"> */}
                                         <Input
                                             label="Keyword"
                                             value={values.keyword}
                                             className="h-[40px] w-[300px]"
-                                            type="keyword"
+                                            type="text"
                                             name="keyword"
                                             placeholder="Enter keyword"
                                             onFocus={hideErrorMessage}
@@ -147,7 +141,7 @@ export default function CreateKeyword() {
                                             label="Type"
                                             value={values.type}
                                             className="h-[40px]  w-[300px]"
-                                            type="type"
+                                            type="text"
                                             name="type"
                                             placeholder="Enter type"
                                             onFocus={hideErrorMessage}
@@ -156,13 +150,15 @@ export default function CreateKeyword() {
 
                                         <Input
                                             label="Default Value"
-                                            value={values.default}
+                                            value={values.default_value}
                                             className="h-[40px]  w-[300px]"
-                                            type="default"
-                                            name="default"
+                                            type="text"
+                                            name="default_value"
                                             placeholder="Enter default value"
                                             onFocus={hideErrorMessage}
-                                            error={isError || errors.default}
+                                            error={
+                                                isError || errors.default_value
+                                            }
                                         />
                                     </div>
                                     <div className="CreateClientForm-SubmitRow marginTop-30 mb-3 flex flex-row justify-between items-start pt-1">
@@ -201,12 +197,10 @@ export default function CreateKeyword() {
                                                 }
                                             />
                                             <Button
-                                                className="ml-[14px] w-[100%] h-[34px]"
+                                                className=" ml-[14px] w-[100%] h-[34px]"
                                                 text="Create Keyword"
                                                 type="primary"
-                                                onClick={() => {
-                                                    alert("Create Keyword")
-                                                }}
+                                                submit
                                             />
                                         </div>
                                     </div>

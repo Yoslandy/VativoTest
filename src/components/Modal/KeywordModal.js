@@ -94,51 +94,59 @@ export default function KeywordModal(props) {
                                     return (
                                         <Form>
                                             <div>
-                                                <Input
-                                                    label="Client Name"
-                                                    value={values.name}
-                                                    className="h-[40px] mb-5"
-                                                    type="name"
-                                                    name="name"
-                                                    placeholder="Enter name"
-                                                    onFocus={hideErrorMessage}
-                                                    error={
-                                                        isError || errors.name
-                                                    }
+                                                <div className="mb-6">
+                                                    <Input
+                                                        label="Client Name"
+                                                        value={values.name}
+                                                        className="h-[40px]"
+                                                        type="text"
+                                                        name="name"
+                                                        placeholder="Enter name"
+                                                        onFocus={
+                                                            hideErrorMessage
+                                                        }
+                                                        error={
+                                                            isError ||
+                                                            errors.name
+                                                        }
+                                                    />
+                                                </div>
+                                                <div className="mb-12">
+                                                    <Input
+                                                        label="Import From"
+                                                        value={values.from}
+                                                        className="h-[40px]"
+                                                        type="text"
+                                                        name="from"
+                                                        placeholder="Enter option"
+                                                        onFocus={
+                                                            hideErrorMessage
+                                                        }
+                                                        error={
+                                                            isError ||
+                                                            errors.from
+                                                        }
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-end ">
+                                                <Button
+                                                    text="Cancel"
+                                                    type="outline"
+                                                    className="ClientModal-button-outline w-[100px]"
+                                                    onClick={toggle}
                                                 />
-                                                <Input
-                                                    label="Import From"
-                                                    value={values.from}
-                                                    className="h-[40px] mb-12"
-                                                    type="from"
-                                                    name="from"
-                                                    placeholder="Enter Option"
-                                                    onFocus={hideErrorMessage}
-                                                    error={
-                                                        isError || errors.from
-                                                    }
+                                                <Button
+                                                    text="Import Keyword"
+                                                    type="primary"
+                                                    className="ClientModal-button-primary w-[180px]"
+                                                    submit
                                                 />
                                             </div>
                                         </Form>
                                     )
                                 }}
                             </Formik>
-                            <div className="flex justify-end ">
-                                <Button
-                                    text="Cancel"
-                                    type="outline"
-                                    className="ClientModal-button-outline w-[100px]"
-                                    onClick={toggle}
-                                />
-                                <Button
-                                    text="Import Keyword"
-                                    type="primary"
-                                    className="ClientModal-button-primary w-[180px]"
-                                    onClick={() => {
-                                        alert("Import Keyword")
-                                    }}
-                                />
-                            </div>
                         </div>
                     </Transition.Child>
                 </div>

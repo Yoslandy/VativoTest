@@ -16,9 +16,9 @@ function Datepicker({ label }) {
 
         if (month.length < 2) month = `0${month}`
         if (day.length < 2) day = `0${day}`
-
         return [year, month, day].join("-")
     }
+
     return (
         <>
             <div className="flex flex-col">
@@ -39,7 +39,7 @@ function Datepicker({ label }) {
                         year: "select-year",
                     }}
                     classes={{
-                        dateContainer: "flex" /* createKeywordRow */,
+                        dateContainer: "flex",
                         yearContainer: "rounded",
                         monthContainer: "rounded",
                         dayContainer: "rounded",
@@ -53,9 +53,25 @@ function Datepicker({ label }) {
                     onDateChange={date => {
                         setDate(date)
                         setSelectedDate(formatDate(date))
+                        console.log(date)
                     }}
+                    /* onMonthChange={month => {
+                        // optional
+                        console.log(month)
+                        console.log({ date: dates, select: selectedDate })
+                    }}
+                    onDayChange={day => {
+                        // optional
+                        console.log(day)
+                        console.log({ date: dates, select: selectedDate })
+                    }}
+                    onYearChange={year => {
+                        // optional
+                        console.log(year)
+                        console.log({ date: dates, select: selectedDate })
+                    }} */
                     defaultValues={{
-                        year: "YY",
+                        year: "YYYY",
                         month: "MM",
                         day: "DD",
                     }}
